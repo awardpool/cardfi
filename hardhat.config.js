@@ -8,7 +8,7 @@ const { RPC_API_KEY, PRIV_KEY, ETHERSCAN_API_KEY } = process.env;
 module.exports = {
   solidity: "0.8.17",
   networks: {
-    polygon: {
+    mumbai: {
       url: `${RPC_API_KEY}`,
       accounts: [PRIV_KEY],
     },

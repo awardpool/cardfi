@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <title>Register information at Blockchain</title>
+
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+    
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <script src="./node_modules/web3/dist/web3.min.js"></script>
+
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
+       ></script>  
+    <script  src="./index.js"></script>    
+    
+  </head>
+
+  <body class="container">
+    <div class="row">
+    <h1 class="page-header">cardFi contract</h1>
+    <div class="row">
+      <div>
+        <h3 class="sub-header">showAllowedCrypto()</h3>
+        <form class="form-inline" role="form">
+          <div class="form-group">  
+          </div>
+          <a href="#" onclick="showAllowedCryptoJS()" class="btn btn-primary">Ok</a>
+        </form>
+      </div>
+    </div>  
+
+    <div class="row">
+      <div>
+        <h3 class="sub-header">setRoyaltyAddress()</h3>
+        <form class="form-inline" role="form">
+          <div class="form-group">
+            <table>
+              <tr>               
+                <td>
+                  <input class="form-control"  id="cardfi_royalty_address">
+                </td>            
+               
+            </table>
+          </div>
+          <a href="#" onclick="setRoyaltyAddress_cardFi()"  class="btn btn-primary">Ok</a>
+          <p id="cardInfoDisplay"></p>
+        </form>
+
+      </div>
+    </div> 
+
+    <div class="row">
+      
+      <div>
+        <h3 class="sub-header">addCurrency();</h3>
+        <form class="form-inline" role="form">
+          <div class="form-group">
+            <table>
+              <tr>
+                
+                <td>
+                  <input class="form-control" placeholder="ERC20" id="addCurrencyVal">
+                </td>                          
+              </tr>
+            </table>
+          </div>
+          <a href="#" onclick="addCurrencyJS()" class="btn btn-primary">Ok</a>
+          <p id="addCur"></p>
+        </form>
+      </div>
+    </div> 
+    
+    <div class="row">
+      <div>
+        <h3 class="sub-header">seeRoyalty()</h3>
+        <form class="form-inline" role="form">
+          <td>
+            <input class="form-control" placeholder="ERC20" id="seeRoyaltyVal">
+          </td>  
+          <a href="#" onclick="seeRoyaltyJS()" class="btn btn-primary">Ok</a>
+        </form> 
+      </div>
+    </div>  
+
+    <div class="row">
+      <div>
+        <h3 class="sub-header">setRoyalty()</h3>
+        <form class="form-inline" role="form">
+          <div class="form-group">
+            <table>
+              <tr>    
+                <td>
+                  <input class="form-control" placeholder="ERC20" id="setRoyalty_ERC20">
+                </td>             
+                <td>
+                  <input class="form-control" placeholder="deposit%" id="setRoyalty_depos">
+                </td>    
+                <td>
+                  <input class="form-control" placeholder="withdraw%" id="setRoyalty_withd">
+                </td>                          
+              </tr>
+            </table>
+          </div>
+          <a href="#" onclick="setRoyaltyJS()" class="btn btn-primary">Ok</a>
+          <p id="setRoyal"></p>
+        </form>
+      </div>
+    </div>  
+
+    <div class="row">
+      <div>
+        <h3 class="sub-header">cardInfo()</h3>
+        <form class="form-inline" role="form">
+          <div class="form-group">
+            <table>
+              <tr>               
+                <td>
+                  <input class="form-control" placeholder="ERC721 contract" id="cardfi_contractaddress">
+                </td>            
+                <td>
+                  <input class="form-control" placeholder="NFT id" id="cardfi_tokenid">
+                </td>                          
+              </tr>
+              
+            </table>
+          </div>
+          <a href="#" onclick="cardInfoJS()"  class="btn btn-primary">Ok</a>
+          <p id="cardInfoDisplay"></p>
+        </form>
+        
+      </div>
+    </div>  
+
+
+    <div class="row">
+      <div>
+        <h3 class="sub-header">deposit_ERC20();</h3>
+        <form class="form-inline" role="form">
+          <div class="form-group">
+            <table>
+              <tr>
+                
+                <td>
+                  <input class="form-control" placeholder="ERC721 contract" id="ERC721">
+                </td>      
+                
+                <td>
+                  <input class="form-control" placeholder="NFT id" id="idOfCard">
+                </td> 
+                
+                <td>
+                  <input class="form-control" placeholder="amount(wei)" id="amountOF">
+                </td>    
+                <td>
+                  <input class="form-control" placeholder="ERC20 currency address" id="currencyOF">
+                </td>       
+                
+                <td>
+                  <input class="form-control" placeholder="lock time(seconds)" id="LOCK_TIME">
+                </td>       
+              </tr>
+            </table>
+          </div>
+          <a href="#" onclick="deposit_ERC20()" class="btn btn-primary">Ok</a>
+          <p id="sendTok"></p>
+        </form>
+      </div>
+    </div>    
+
+    <div class="row">
+      <div>
+        <h3 class="sub-header">deposit_native();</h3>
+        <form class="form-inline" role="form">
+          <div class="form-group">
+            <table>
+              <tr>
+                
+                <td>
+                  <input class="form-control" placeholder="ERC721 contract" id="ERC721_native">
+                </td>      
+                
+                <td>
+                  <input class="form-control" placeholder="NFT id" id="idOfCard_native">
+                </td> 
+                
+                <td>
+                  <input class="form-control" placeholder="amount(wei)" id="amountOF_native">
+                </td>    
+                      
+                <td>
+                  <input class="form-control" placeholder="lock time(seconds)" id="LOCK_TIME_native">
+                </td>       
+              </tr>
+            </table>
+          </div>
+
+          <div class="form-group">
+          </div>
+          <a href="#" onclick="deposit_nativeJS()" class="btn btn-primary">Ok</a>
+          <p id="sendTok"></p>
+        </form>
+      </div>
+    </div>    
+    
+    <div class="row">
+      <div>
+        <h3 class="sub-header">contractBalance()</h3>
+        <form class="form-inline" role="form">
+          <div class="form-group">
+            <table>
+              <tr>               
+                <td>
+                  <input class="form-control" placeholder="ERC20" id="erc20Balance">
+                </td>                          
+              </tr>
+            </table>
+          </div>
+          <a href="#" onclick="contractBalanceJS()" class="btn btn-primary">Ok</a>
+        </form>
+      </div>
+    </div>  
+    
+  
+    
+    <div class="row">
+      <div>
+        <h3 class="sub-header">redeem()</h3>
+        <form class="form-inline" role="form">
+          <div class="form-group">
+            <table>
+              <tr>
+                <td>
+                  <input class="form-control" placeholder="ERC721" id="contract_redemption">
+                </td>            
+                <td>
+                  <input class="form-control" placeholder="NFT_id" id="cardId_redemption">
+                </td>   
+                <td>
+                  <input class="form-control" placeholder="how much" id="money_redemption">
+                </td>                         
+              </tr>
+            </table>
+          </div>
+          <a href="#" onclick="redeem()" class="btn btn-primary">Ok</a>
+          <p id="takeMoney"></p>
+        </form>
+      </div>
+    </div> 
+   
+  </body>
+</html>
