@@ -77,6 +77,9 @@ In line 17, replace the value of contractAddress with your proxy contract addres
 7. Your contract should now be upgraded.
 
 ## **Example CardFi HTML & Javascript**
+
+Visit: https://awardpool.github.io/cardFi/
+
 THe HTML and javascript is setting up a website that allows users to register information at Blockchain. It is using the Bootstrap library for styling and the jQuery, Web3, and Ethers libraries to allow for the website to connect to Blockchain and access the necessary information. The HTML file contains several forms that allow the user to enter information, such as their address, currency information, and the amount of money being deposited. 
 
 It also contains several functions that are used to interact with the Blockchain.
