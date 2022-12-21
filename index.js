@@ -14,6 +14,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   let network = await signer.provider.getNetwork();
   chainId = network.chainId;
   console.log(chainId);
+  if (chainId != 80001) {
+    swal("Please switch to Mumbai testnet");
+  }
   contractAddress = "0x4736fbdf9b04aa78840fBD051Dd22E1CB89254F5";
 
   contract = new ethers.Contract(contractAddress, abi, signer);
