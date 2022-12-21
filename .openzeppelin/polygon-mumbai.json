@@ -1,0 +1,222 @@
+{
+  "manifestVersion": "3.2",
+  "admin": {
+    "address": "0x9BfB4316A49cBF1f087436027Ff831C72442ddcE",
+    "txHash": "0x6d3a688d0d7d898cbe871afa0142ddf9dc32543fee537ad29cfe9bb498a0d6fb"
+  },
+  "proxies": [
+    {
+      "address": "0x4736fbdf9b04aa78840fBD051Dd22E1CB89254F5",
+      "txHash": "0xe6fd53d0c04a95e9ef274a75413cb38ec94db12a1d628ab96a43fdbd1775aa64",
+      "kind": "transparent"
+    }
+  ],
+  "impls": {
+    "6405527254372f3f91c2fbba1317d59ed33cd9fc843eab91c974571e25bd2814": {
+      "address": "0x7B8622faDBAA6E465C6e137a0772137e8AaBE38a",
+      "txHash": "0xc8ab8b77a5c8ae198dbf0fd6e5e281bafe95f5a1869c0f0c054a7e0a4c783da3",
+      "layout": {
+        "solcVersion": "0.8.17",
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:67"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:22"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:94"
+          },
+          {
+            "label": "royaltyAddress",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_address_payable",
+            "contract": "cardFi",
+            "src": "contracts\\cardFi.sol:15"
+          },
+          {
+            "label": "deposit",
+            "offset": 20,
+            "slot": "101",
+            "type": "t_uint8",
+            "contract": "cardFi",
+            "src": "contracts\\cardFi.sol:18"
+          },
+          {
+            "label": "withdraw",
+            "offset": 21,
+            "slot": "101",
+            "type": "t_uint8",
+            "contract": "cardFi",
+            "src": "contracts\\cardFi.sol:19"
+          },
+          {
+            "label": "Royalties",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_mapping(t_contract(IERC20Upgradeable)378,t_struct(Fee)1169_storage)",
+            "contract": "cardFi",
+            "src": "contracts\\cardFi.sol:28"
+          },
+          {
+            "label": "allowedCrypto",
+            "offset": 0,
+            "slot": "103",
+            "type": "t_array(t_contract(IERC20Upgradeable)378)dyn_storage",
+            "contract": "cardFi",
+            "src": "contracts\\cardFi.sol:31"
+          },
+          {
+            "label": "vaultBox",
+            "offset": 0,
+            "slot": "104",
+            "type": "t_mapping(t_contract(IERC721Upgradeable)494,t_mapping(t_uint256,t_struct(Card)1220_storage))",
+            "contract": "cardFi",
+            "src": "contracts\\cardFi.sol:44"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_address_payable": {
+            "label": "address payable",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_contract(IERC20Upgradeable)378)dyn_storage": {
+            "label": "contract IERC20Upgradeable[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_contract(IERC20Upgradeable)378": {
+            "label": "contract IERC20Upgradeable",
+            "numberOfBytes": "20"
+          },
+          "t_contract(IERC721Upgradeable)494": {
+            "label": "contract IERC721Upgradeable",
+            "numberOfBytes": "20"
+          },
+          "t_mapping(t_contract(IERC20Upgradeable)378,t_struct(Fee)1169_storage)": {
+            "label": "mapping(contract IERC20Upgradeable => struct cardFi.Fee)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_contract(IERC721Upgradeable)494,t_mapping(t_uint256,t_struct(Card)1220_storage))": {
+            "label": "mapping(contract IERC721Upgradeable => mapping(uint256 => struct cardFi.Card))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(Card)1220_storage)": {
+            "label": "mapping(uint256 => struct cardFi.Card)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Card)1220_storage": {
+            "label": "struct cardFi.Card",
+            "members": [
+              {
+                "label": "token",
+                "type": "t_contract(IERC20Upgradeable)378",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "balance",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "lockTime",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "ERC20Added",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "nativeCurrency",
+                "type": "t_bool",
+                "offset": 1,
+                "slot": "3"
+              }
+            ],
+            "numberOfBytes": "128"
+          },
+          "t_struct(Fee)1169_storage": {
+            "label": "struct cardFi.Fee",
+            "members": [
+              {
+                "label": "deposit",
+                "type": "t_uint8",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "withdraw",
+                "type": "t_uint8",
+                "offset": 1,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    }
+  }
+}

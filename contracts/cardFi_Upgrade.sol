@@ -34,10 +34,7 @@ contract cardFi_Upgrade is Initializable, OwnableUpgradeable {
   function initialize() public initializer {
     //Initializes the owner
     __Ownable_init();
-    //adds cardFi token to the list
-    royaltyAddress = payable(0x08d853aBceBAB240889681D273F2A8458054C98b);
-    //sets native currency royalties
-    setRoyalty_native(1, 3);
+    
   }
 
   //This points from NFT contract to its ID to the info about the NFT
@@ -255,6 +252,7 @@ contract cardFi_Upgrade is Initializable, OwnableUpgradeable {
     );
     require(succeeded, "transfer failed");
     require(succeededRoyalty, "transfer failed");
+    //this address is an exception and allowed to set the lock time as well
     address cardFi_NFT = (0x787251d16503DeE83fC05B960c5D1FCd3F22CCED);
 
     if (

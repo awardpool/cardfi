@@ -34,7 +34,7 @@ contract cardFi is Initializable, OwnableUpgradeable {
   function initialize() public initializer {
     //Initializes the owner
     __Ownable_init();
-    //adds cardFi token to the list
+    //sets Royalty address
     royaltyAddress = payable(0x08d853aBceBAB240889681D273F2A8458054C98b);
     //sets native currency royalties
     setRoyalty_native(1, 3);
