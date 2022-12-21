@@ -4,7 +4,7 @@
 <h1 align="center" id="cardfi"><strong><a href="https://cardfi.co">CardFi</a></strong></h1>
 <h3 align="center"><strong>NFT GIFT CARD PROTOCOL</strong></h1>
  
-[CardFi](https://cardfi.co) is a new layer 3 NFT EVM protocol that provide NFT holders with the ability to store value assocated with a particular NFT and transfer it to someone else. They are essentially digital gift/debit cards with associated ERC20 tokens that can be attached to them. These tokens can then be deposited onto the card and can be locked for a given period of time. The current holder of the card is the only one that has the right to redeem the tokens. The NFT Gift Cards are easily transferable and can be traded, sold, or transferred on many popular marketplaces. There is a 3% deposit fee and a 5% withdrawal fee fee associated with these cards, however if the CardFi Token is used the fees are free.
+[CardFi](https://cardfi.co) is a new layer 3 NFT EVM protocol that provide NFT holders with the ability to store value assocated with a particular NFT and transfer it to someone else. They are essentially digital gift/debit cards with associated ERC20 tokens that can be attached to them. These tokens can then be deposited onto the card and can be locked for a given period of time. The current holder of the card is the only one that has the right to redeem the tokens. The NFT Gift Cards are easily transferable and can be traded, sold, or transferred on many popular marketplaces. There is a 3% deposit fee and a 5% withdrawal fee associated with these cards, however if the CardFi Token is used the fees are free.
 
 ## **What are asset-attached NFTs?**
 
