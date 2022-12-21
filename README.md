@@ -72,3 +72,44 @@ In line 17, replace the value of contractAddress with your proxy contract addres
 6. Repeat step 6 and 7 from the "Deploy" section above.
 
 7. Your contract should now be upgraded.
+
+## **Example CardFi HTML & Javascript**
+THe HTML and javascript is setting up a website that allows users to register information at Blockchain. It is using the Bootstrap library for styling and the jQuery, Web3, and Ethers libraries to allow for the website to connect to Blockchain and access the necessary information. The HTML file contains several forms that allow the user to enter information, such as their address, currency information, and the amount of money being deposited. 
+
+It also contains several functions that are used to interact with the Blockchain.
+
+showAllowedCrypto() <br>
+This function will show the list of ERC20 currencies that are allowed for deposit in the contract.
+
+setRoyaltyAddress() <br>
+This function will take a royalty address as input from the user, and set it in the contract.
+
+setRoyalty_native() <br>
+This function will take two inputs from the user, deposit rate and withdraw rate. It will set the royalty rate for native currency in the contract. 
+
+seeRoyalty_native() <br>
+This function will display the royalty rate for the native currency in the contract.
+
+tokenExist() <br>
+This function will check if an ERC20 currency exists in the contract. It will take an ERC20 address as input from the user.
+
+addCurrency() <br>
+This function will add an ERC20 currency in the contract. It will take an ERC20 address as input from the user.
+
+seeRoyalty_ERC20() <br>
+This function will display the royalty rate for an ERC20 currency in the contract. It will take an ERC20 address as input from the user.
+
+setRoyalty_ERC20() <br>
+This function will set the royalty rate for an ERC20 currency in the contract. It will take three inputs from the user, an ERC20 address, deposit rate and withdraw rate.
+
+tokenToNft() <br>
+This function will transfer an ERC20 currency from a user to an ERC721 contract. It will take three inputs from the user, an ERC721 address, an NFT id, and an ERC20 address.
+
+cardInfo() <br>
+This function will provide information about an ERC721 NFT. It will take two inputs from the user, an ERC721 address and an NFT id.
+
+deposit_ERC20() <br>
+This function will allow a user to deposit an ERC20 currency in an ERC721 contract. It will take five inputs from the user, an ERC721 address, an NFT id, an amount, an ERC20 currency address, and a lock time.
+
+deposit_native() <br>
+This function will allow a user to deposit native currency in an ERC721 contract. It will take four inputs from the user, an ERC721 address, an NFT id, an amount
