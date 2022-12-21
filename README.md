@@ -1,3 +1,5 @@
+This set of instructions provides a step-by-step guide to deploying, upgrading, and using a CardFi Smart Contract. It involves cloning the repository, creating a .env file with your own values, running a command in your terminal, verifying the contract, replacing the proxy address in the index.js file, running another command in the terminal, and finally upgrading the contract. Following these steps should allow you to successfully deploy and use the CardFi Smart Contract.
+
 Steps to Deploy, Upgrade, and Use CardFi Smart Contract:
 
 1. Clone this repo to your PC and open it in VS code.
