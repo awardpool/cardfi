@@ -77,6 +77,7 @@ In line 17, replace the value of contractAddress with your proxy contract addres
 7. Your contract should now be upgraded.
 
 ## **Example CardFi HTML & Javascript**
+This demo page shows all the various CardFi functions runing in javascript using the Polygon Mumbai testnet. 
 
 Visit: https://awardpool.github.io/cardFi/
 
