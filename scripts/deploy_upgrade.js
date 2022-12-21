@@ -1,6 +1,6 @@
 const { ethers, upgrades } = require("hardhat");
 
-const PROXY = "your upgradeablr roxy contract";
+const PROXY = "your proxy contract";
 
 async function main() {
   const cardFi_Upgrade = await ethers.getContractFactory("cardFi_Upgrade");
