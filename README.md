@@ -2,9 +2,9 @@ This set of instructions provides a step-by-step guide to deploying, upgrading, 
 
 Steps to Deploy, Upgrade, and Use CardFi Smart Contract:
 
-1. Clone this repo to your PC and open it in VS code.
+1. Clone this repo to your PC and open it in VS code or IDE or your preferred IDE.
 
-2. Create .env file in the same location as your hardhat.config.js file.
+2. Create .env file in the same location as your hardhat.config.js file. The ".env" file is used to store environment variables like API keys that can be used within your application.
 
 3. Add the following variables to the .env file, using your own values:
      PRIV_KEY="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
