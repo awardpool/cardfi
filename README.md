@@ -1,13 +1,7 @@
-# Sample Hardhat Project
+                                                                        HOW TO DEPLOY AND USE CARDFI SMART CONTRACT:
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
 
-Try running some of the following tasks:
-
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
-```
+        1. Clone this repo to your PC and open it in VS code.
+        2. Create .env file in the same location where your hardhat.config.js file is
+        3. Fill up the variables that are shown on the picture below:
+        ![ENV](guide_images\env_image.png)
