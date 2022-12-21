@@ -16,6 +16,9 @@ For example, an NFT could be attached to a piece of ethreum ERC20 Token, and the
 
 Asset-attached NFT gift cards are a new type of gift card that are built on the decentralized web and use non-fungible tokens (NFTs) to store value. They offer several advantages over traditional gift cards, including being unique, secure, and able to be used to purchase a wide range of digital items. There is a large market opportunity for NFT gift cards, with a significant amount of money currently being spent on traditional gift cards and a growing demand for digital gift options.
 
+## Where can I try CardFi?
+Go to [CardFi.co](https://cardfi.co)
+
 # **Instructions**
 
 This set of instructions provides a step-by-step guide to deploying, upgrading, and using a CardFi Smart Contract. It involves cloning the repository, creating a .env file with your own values, running a command in your terminal, verifying the contract, replacing the proxy address in the index.js file, running another command in the terminal, and finally upgrading the contract. Following these steps should allow you to successfully deploy and use the CardFi Smart Contract.
