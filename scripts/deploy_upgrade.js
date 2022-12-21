@@ -1,4 +1,8 @@
-const { ethers, upgrades } = require("hardhat");
+// This function upgrades a Proxy contract to a cardFi_Upgrade contract. 
+// The proxy contract is passed in as the first argument. 
+// The function uses the ethers.getContractFactory() to get the cardFi_Upgrade contract. 
+// Then it uses the upgrades.upgradeProxy() method to upgrade the proxy to the cardFi_Upgrade contract. 
+// Finally, it logs out a message to the console to indicate that the upgrade has been successful.const { ethers, upgrades } = require("hardhat");
 
 const PROXY = "your proxy contract";
 
