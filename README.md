@@ -1,60 +1,52 @@
-        HOW TO DEPLOY UPGRADE AND USE CARDFI SMART CONTRACT:
+Steps to Deploy, Upgrade, and Use CardFi Smart Contract:
 
+1. Clone this repo to your PC and open it in VS code.
 
-        1. Clone this repo to your PC and open it in VS code.
+2. Create .env file in the same location as your hardhat.config.js file.
 
-        2. Create .env file in the same location where your hardhat.config.js file is
+3. Add the following variables to the .env file, using your own values:
+     PRIV_KEY="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+     RPC_API_KEY=https://polygon-mumbai.g.alchemy.com/xx/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+     ETHERSCAN_API_KEY="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 
-        3. add the variables below(the value must be yours):
-        PRIV_KEY="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-        RPC_API_KEY=https://polygon-mumbai.g.alchemy.com/xx/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-        ETHERSCAN_API_KEY="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+4. Open your terminal and run:
+     npx hardhat run --network mumbai scripts/deploy.js
 
-        4. Open your terminal and execute the line:
+5. Open your wallet in the block explorer and you should see 3 deployed contracts:
+     -TransparentUpgradeableProxy (Proxy contract)
+     -ProxyAdmin (not needed)
+     -Implementation contract
 
-        npx hardhat run --network mumbai scripts/deploy.js
+6. Click the "more options" button next to the proxy contract.
+Click "Is this a proxy", then click save. It should tell you that the implementation contract is not verified.
 
-        5. Open your wallet in the block explorer and you will see 3 deployed contracts:
-             -TransparentUpgradeableProxy(Proxy contract);
-             -ProxyAdmin(we won't need it);
-             -Implementation contract;
-        6. Inside of your proxy contract click "more options" button that is on the right side from the contract's name.
-           Click "Is this a proxy" then click save and it will tell you that you implementation contract isn't verified
+7. Copy the address of the implementation contract and run the following command in your terminal:
+     npx hardhat verify --network  xxxxxxx
+(where xxxxx is the address of the implementation contract)
 
-        7. Copy implementation contract's address and execute the line in your Terminal:
+8. Click the save button again. This time it should save and your proxy contract address is ready to use.
 
-           npx hardhat verify --network  xxxxxxx
+9. Copy the proxy contract address and open the index.js file.
+In line 17, replace the value of contractAddress with your proxy contract address.
 
-           where xxxxx is the implementation contracts's address
+10. Run the following command in your terminal:
+     node server.js
 
-           Repeat step 6 and click "save" button again.
-           This time it will save it and your proxy contract address is ready to be used.
+11. Follow the localhost link from the terminal to use the CardFi contract.
 
-        8. Copy your proxy contract's address and go to index.js file.
-           in Line 17 replace the value of contractAddress with your proxy contract.
+To Upgrade the Contract:
 
-        9. in your Terminal Execute the line:
+1. Open the cardFi_Upgrade.sol file in the "contracts" folder.
 
-        node server.js
+2. Make the changes needed.
 
-        click the localhost link from the Terminal.
+3. Open the scripts/deploy_upgrade.js file.
 
-        You can now use cardFi contract
+4. Replace PROXY with your proxy contract address.
 
-        HOW TO UPGRADE YOUR CONTRACT
+5. Run the following command in your terminal:
+     npx hardhat run --network mumbai /scripts/deploy_upgrade.js
 
-        10. In "contracts" folder open cardFi_Upgrade.sol file
+6. Repeat step 6 and 7 from the "Deploy" section above.
 
-        Make the changes that you need.
-
-        Open scripts/deploy_upgrade.js
-
-        Replace PROXY value with your proxy contract address
-
-        execute the line:
-
-        npx hardhat run --network mumbai /scripts/deploy_upgrade.js
-
-        Repeat step 6 and 7
-
-        Your contract is upgraded!
+7. Your contract should now be upgraded.
