@@ -2,11 +2,11 @@ let provider = new ethers.providers.Web3Provider(window.ethereum, "any");
 let chainId;
 let signer;
 let contract;
-
 let contractAddress;
-let contractAddress_NFT;
 
 document.addEventListener("DOMContentLoaded", async () => {
+  //await provider.setNetwork("Mumbai");
+
   await provider.send("eth_requestAccounts", []);
 
   signer = provider.getSigner();
@@ -14,7 +14,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   let network = await signer.provider.getNetwork();
   chainId = network.chainId;
   console.log(chainId);
-
+  if (chainId != 80001) {
+    swal("Please switch to Mumbai testnet");
+  }
   contractAddress = "0x4736fbdf9b04aa78840fBD051Dd22E1CB89254F5";
 
   contract = new ethers.Contract(contractAddress, abi, signer);
