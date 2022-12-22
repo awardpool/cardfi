@@ -1,17 +1,21 @@
-// This function will create a new Provider instance using the Web3Provider class using ethers.js, and then use the setNetwork() method to switch to the specified blockchain.
-// Note that, like in the previous example, this function assumes that the user has MetaMask installed and enabled in their browser, and that the window.ethereum object is available.
-// switchBlockchain is an async function that takes in a newNetwork string as a parameter. The function sets the provider's network to the newNetwork parameter and then prints a success message to the console. To use this function, pass in a valid Ethereum network string as the parameter, for example 'rinkeby'.
 
-// Import the ethers.js library
-import { ethers } from 'ethers';
-// Create a new provider instance
-const provider = new ethers.providers.Web3Provider(window.ethereum);
-// Define the function to switch blockchains
-async function switchBlockchain(newNetwork) {
-  // Switch to the specified blockchain
-  await provider.setNetwork(newNetwork);
-  // Confirm that the blockchain has been changed
-  console.log(`Successfully switched to ${newNetwork} network.`);
-}
-// Call the function to switch to the Rinkeby testnet
-switchBlockchain('rinkeby');
+// This code is used to connect a wallet to the Matic mainnet blockchain using ethers.js. It uses the ethereum web3 API to call the 
+// wallet_addEthereumChain method, which requires an object with the chainId, rpcUrls, chainName, nativeCurrency name, 
+// symbol, and decimals, and blockExplorerUrls as parameters. In this case, the chainId is 0x89 for the Matic mainnet, the 
+// rpcUrl is the URL of the mainnet node, the chainName is "Matic Mainnet", the nativeCurrency name and symbol are both "MATIC", 
+// the decimals are 18, and the blockExplorerUrls is the URL of the block explorer.
+
+window.ethereum.request({
+    method: "wallet_addEthereumChain",
+    params: [{
+        chainId: "0x89",
+        rpcUrls: ["https://rpc-mainnet.matic.network/"],
+        chainName: "Matic Mainnet",
+        nativeCurrency: {
+            name: "MATIC",
+            symbol: "MATIC",
+            decimals: 18
+        },
+        blockExplorerUrls: ["https://polygonscan.com/"]
+    }]
+});
