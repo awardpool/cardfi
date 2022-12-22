@@ -5,8 +5,6 @@ let contract;
 let contractAddress;
 
 document.addEventListener("DOMContentLoaded", async () => {
-  //await provider.setNetwork("Mumbai");
-
   await provider.send("eth_requestAccounts", []);
 
   signer = provider.getSigner();
