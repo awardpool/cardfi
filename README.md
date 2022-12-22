@@ -79,7 +79,7 @@ In line 17, replace the value of contractAddress with your proxy contract addres
 ## **Example CardFi HTML & Javascript**
 This demo page shows all the various CardFi functions runing in javascript using the Polygon Mumbai testnet. 
 
-Visit: https://awardpool.github.io/cardFi/
+Visit: https://awardpool.github.io/cardfi/
 
 THe HTML and javascript is setting up a website that allows users to register information at Blockchain. It is using the Bootstrap library for styling and the jQuery, Web3, and Ethers libraries to allow for the website to connect to Blockchain and access the necessary information. The HTML file contains several forms that allow the user to enter information, such as their address, currency information, and the amount of money being deposited. 
 
