@@ -4,7 +4,7 @@
 <h1 align="center" id="cardfi"><strong><a href="https://cardfi.co">CardFi</a></strong></h1>
 <h3 align="center"><strong>NFT GIFT CARD PROTOCOL</strong></h1>
  
-[CardFi](https://cardfi.co) is a new layer 3 NFT EVM protocol that provide NFT holders with the ability to store value assocated with a particular NFT and transfer it to someone else. They are essentially digital gift/debit cards with associated ERC20 tokens that can be attached to them. These tokens can then be deposited onto the card and can be locked for a given period of time. The current holder of the card is the only one that has the right to redeem the tokens. The NFT Gift Cards are easily transferable and can be traded, sold, or transferred on many popular marketplaces. There is a 3% deposit fee and a 5% withdrawal fee associated with these cards, however if the CardFi Token is used the fees are free.
+[CardFi](https://cardfi.co) is a new layer 3 NFT EVM protocol that provide NFT holders with the ability to store value assocated with a particular NFT and transfer it to someone else. They are essentially digital gift/debit cards with associated ERC20 tokens that can be attached to them. These tokens can then be deposited onto the card and can be locked for a given period of time. The current holder of the card is the only one that has the right to redeem the tokens. The NFT Gift Cards are easily transferable and can be traded, sold, or transferred on many popular marketplaces.  
 
 ## **What are asset-attached NFTs?**
 
@@ -79,7 +79,7 @@ In line 17, replace the value of contractAddress with your proxy contract addres
 ## **Example CardFi HTML & Javascript**
 This demo page shows all the various CardFi functions runing in javascript using the Polygon Mumbai testnet. 
 
-Visit: https://awardpool.github.io/cardFi/
+Visit: https://awardpool.github.io/cardfi/
 
 THe HTML and javascript is setting up a website that allows users to register information at Blockchain. It is using the Bootstrap library for styling and the jQuery, Web3, and Ethers libraries to allow for the website to connect to Blockchain and access the necessary information. The HTML file contains several forms that allow the user to enter information, such as their address, currency information, and the amount of money being deposited. 
 
