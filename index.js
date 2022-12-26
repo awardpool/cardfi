@@ -13,13 +13,38 @@ document.addEventListener("DOMContentLoaded", async () => {
   chainId = network.chainId;
   console.log(chainId);
   if (chainId != 80001) {
-    swal("Please switch to Mumbai testnet");
+    swal("Switching to mumbai");
+    window.ethereum.request({
+      method: "wallet_addEthereumChain",
+      params: [
+        {
+          chainId: "0x13881",
+          rpcUrls: ["https://rpc-mumbai.maticvigil.com/"],
+          chainName: "Mumbai Testnet",
+          nativeCurrency: {
+            name: "MATIC",
+            symbol: "MATIC",
+            decimals: 18,
+          },
+          blockExplorerUrls: ["https://mumbai.polygonscan.com/"],
+        },
+      ],
+    });
   }
   contractAddress = "0x4736fbdf9b04aa78840fBD051Dd22E1CB89254F5";
 
   contract = new ethers.Contract(contractAddress, abi, signer);
 
   console.log("contractAddress", contractAddress);
+});
+
+provider.on("network", (newNetwork, oldNetwork) => {
+  if (oldNetwork) {
+    console.log("New network selected:", newNetwork);
+    setTimeout(() => {
+      window.location.reload();
+    }, 1000);
+  }
 });
 
 const abi = [
